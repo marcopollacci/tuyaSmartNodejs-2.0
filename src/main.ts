@@ -1,3 +1,4 @@
+import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import {
   FastifyAdapter,
@@ -12,6 +13,10 @@ async function bootstrap() {
     new FastifyAdapter()
   );
 
+  app.useGlobalPipes(new ValidationPipe({
+    transform: true,
+  }));
+
   const options = new DocumentBuilder()
   .setTitle('Tuya Call')
   .setDescription('TuyaCall API')
@@ -21,6 +26,6 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('swagger', app, document);
 
-  await app.listen(3000, '0.0.0.0');
+  await app.listen(8081, '0.0.0.0');
 }
 bootstrap();
