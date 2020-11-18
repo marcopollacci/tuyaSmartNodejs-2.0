@@ -19,7 +19,7 @@ export class QuerySingleDeviceDTO {
         message: `Use 'accendi' to turn on or 'spegni' to turn off`
     })
     @ApiProperty({
-        description: 'Use "accendi" to turn on or "spegni" to turn off',
+        description: `Use 'accendi' to turn on or 'spegni' to turn off`
     })
     use: string;
 }

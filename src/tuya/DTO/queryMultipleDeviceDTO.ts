@@ -9,7 +9,7 @@ export class QueryMultipleDeviceDTO extends QuerySingleDeviceDTO {
         no_symbols: true //evita caratteri che non siano numeri, compresi . e ,
     })
     @ApiProperty({
-        maximum: 1
+        minimum: 1
     })
     subdevice: number;
 

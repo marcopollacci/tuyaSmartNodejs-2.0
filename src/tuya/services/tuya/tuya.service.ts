@@ -4,10 +4,16 @@ import * as TuyAPI from 'tuyapi';
 import { operation } from 'retry';
 import { QueryMultipleDeviceDTO } from 'src/tuya/DTO/queryMultipleDeviceDTO';
 import { IDataTuya } from 'src/interfaces/dataTuya.interface';
+import { QueryNooieDeviceDTO } from 'src/tuya/DTO/queryNooieDeviceDTO';
+import { ColorConversionService } from '../color-conversion/color-conversion.service';
 @Injectable()
 export class TuyaService {
 
     private readonly logger =  new Logger(TuyaService.name);
+
+    constructor(
+      private colorConvSrv: ColorConversionService
+    ) {}
 
     triggerSingleDevice(queryParams: QuerySingleDeviceDTO) {
         let checkuse = false;
@@ -37,8 +43,41 @@ export class TuyaService {
           })
     }
 
-    private async doTrigger(queryParams: QuerySingleDeviceDTO | QueryMultipleDeviceDTO, objectSet: object): Promise<void> {
+    async triggerNooieDevice(queryParams: QueryNooieDeviceDTO) {
+      let checkuse = false;
+
+        if(queryParams.use === 'accendi'){
+          checkuse = true;
+        }
+        const dataSet = {
+          '20': checkuse
+        };
+
+        if (queryParams.mode) {
+          dataSet['21'] = queryParams.mode;
+        }
+
+        if (queryParams.dimmer) {
+          dataSet['22'] = (Number(queryParams.dimmer) * 10);
+        }
+
+        if (queryParams.temperature) {
+          dataSet['23'] = Number(queryParams.temperature);
+        }
+
+        if (queryParams.colour) {
+          dataSet['24'] = `${ await this.colorConvSrv.RGBtoHSV(queryParams.colour)}03e803e8`;
+        };
+
+        this.doTrigger(queryParams, {
+          multiple: true,
+          data: dataSet
+        });
+  }
+
+    private async doTrigger(queryParams: QuerySingleDeviceDTO | QueryMultipleDeviceDTO | QueryNooieDeviceDTO, objectSet: object): Promise<void> {
         const device = this.generateConnectionTuya(queryParams.id, queryParams.key);
+        this.logger.log('objectSet', JSON.stringify(objectSet));
         device.on('data', (data: IDataTuya) => {
             if(typeof data !== "undefined"){
               let cambio_stato = new Promise((resolve) => {
