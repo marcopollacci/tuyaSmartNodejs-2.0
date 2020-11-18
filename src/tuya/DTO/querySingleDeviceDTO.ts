@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsNotEmpty, IsString } from "class-validator";
+import { IsNotEmpty, IsString, Matches } from "class-validator";
 
 export class QuerySingleDeviceDTO {
 
@@ -15,6 +15,11 @@ export class QuerySingleDeviceDTO {
 
     @IsNotEmpty()
     @IsString()
-    @ApiProperty()
+    @Matches(/^(spegni|accendi)\b/, {
+        message: `Use 'accendi' to turn on or 'spegni' to turn off`
+    })
+    @ApiProperty({
+        description: 'Use "accendi" to turn on or "spegni" to turn off',
+    })
     use: string;
 }
