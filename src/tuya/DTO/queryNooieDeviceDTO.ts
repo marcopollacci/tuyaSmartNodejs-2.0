@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsNotEmpty, IsNumberString, IsOptional, Matches } from "class-validator";
+import { IsNumberString, IsOptional, Matches } from "class-validator";
 import { QuerySingleDeviceDTO } from "./querySingleDeviceDTO";
 
 export class QueryNooieDeviceDTO extends QuerySingleDeviceDTO {

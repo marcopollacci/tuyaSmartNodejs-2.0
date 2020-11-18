@@ -1,4 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { ColorConversionService } from '../color-conversion/color-conversion.service';
 import { TuyaService } from './tuya.service';
 
 describe('TuyaService', () => {
@@ -6,7 +7,7 @@ describe('TuyaService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [TuyaService],
+      providers: [TuyaService, ColorConversionService],
     }).compile();
 
     service = module.get<TuyaService>(TuyaService);
@@ -16,3 +17,4 @@ describe('TuyaService', () => {
     expect(service).toBeDefined();
   });
 });
+

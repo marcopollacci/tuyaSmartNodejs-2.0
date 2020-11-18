@@ -1,6 +1,7 @@
 import { Controller, Get, Query } from '@nestjs/common';
-import { QueryNooieDeviceDTO } from 'src/tuya/DTO/queryNooieDeviceDTO';
-import { TuyaService } from 'src/tuya/services/tuya/tuya.service';
+import { QueryNooieDeviceDTO } from '../../DTO/queryNooieDeviceDTO';
+import { TuyaService } from '../../services/tuya/tuya.service';
+
 
 @Controller('nooie')
 export class NooieController {
