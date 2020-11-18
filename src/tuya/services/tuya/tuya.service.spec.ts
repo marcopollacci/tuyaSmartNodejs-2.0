@@ -17,4 +17,3 @@ describe('TuyaService', () => {
     expect(service).toBeDefined();
   });
 });
-

@@ -10,19 +10,21 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter()
+    new FastifyAdapter(),
   );
 
-  app.useGlobalPipes(new ValidationPipe({
-    transform: true,
-  }));
+  app.useGlobalPipes(
+    new ValidationPipe({
+      transform: true,
+    }),
+  );
 
   const options = new DocumentBuilder()
-  .setTitle('Tuya Call')
-  .setDescription('TuyaCall API')
-  .setVersion('1.0')
-  .build();
-  
+    .setTitle('Tuya Call')
+    .setDescription('TuyaCall API')
+    .setVersion('1.0')
+    .build();
+
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('swagger', app, document);
 

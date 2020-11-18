@@ -10,7 +10,7 @@ describe('NooieController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [NooieController],
-      providers: [QueryNooieDeviceDTO, TuyaService, ColorConversionService]
+      providers: [QueryNooieDeviceDTO, TuyaService, ColorConversionService],
     }).compile();
 
     controller = module.get<NooieController>(NooieController);
@@ -20,4 +20,3 @@ describe('NooieController', () => {
     expect(controller).toBeDefined();
   });
 });
-

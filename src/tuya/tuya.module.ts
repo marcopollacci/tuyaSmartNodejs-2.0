@@ -9,6 +9,12 @@ import { QuerySingleDeviceDTO } from './DTO/querySingleDeviceDTO';
 
 @Module({
   controllers: [TuyaController, NooieController],
-  providers: [TuyaService, ColorConversionService, QuerySingleDeviceDTO, QueryMultipleDeviceDTO, QueryNooieDeviceDTO]
+  providers: [
+    TuyaService,
+    ColorConversionService,
+    QuerySingleDeviceDTO,
+    QueryMultipleDeviceDTO,
+    QueryNooieDeviceDTO,
+  ],
 })
 export class TuyaModule {}

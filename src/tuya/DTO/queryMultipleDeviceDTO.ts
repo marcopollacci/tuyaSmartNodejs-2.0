@@ -1,16 +1,14 @@
-import { ApiProperty } from "@nestjs/swagger";
-import { IsNotEmpty, IsNumberString } from "class-validator";
-import { QuerySingleDeviceDTO } from "./querySingleDeviceDTO";
+import { ApiProperty } from '@nestjs/swagger';
+import { IsNotEmpty, IsNumberString } from 'class-validator';
+import { QuerySingleDeviceDTO } from './querySingleDeviceDTO';
 
 export class QueryMultipleDeviceDTO extends QuerySingleDeviceDTO {
-
-    @IsNotEmpty()
-    @IsNumberString({
-        no_symbols: true //evita caratteri che non siano numeri, compresi . e ,
-    })
-    @ApiProperty({
-        minimum: 1
-    })
-    subdevice: number;
-
+  @IsNotEmpty()
+  @IsNumberString({
+    no_symbols: true, //evita caratteri che non siano numeri, compresi . e ,
+  })
+  @ApiProperty({
+    minimum: 1,
+  })
+  subdevice: number;
 }

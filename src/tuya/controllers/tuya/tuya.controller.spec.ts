@@ -11,7 +11,12 @@ describe('TuyaController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [TuyaController],
-      providers: [QuerySingleDeviceDTO, QueryMultipleDeviceDTO, TuyaService, ColorConversionService]
+      providers: [
+        QuerySingleDeviceDTO,
+        QueryMultipleDeviceDTO,
+        TuyaService,
+        ColorConversionService,
+      ],
     }).compile();
 
     controller = module.get<TuyaController>(TuyaController);
