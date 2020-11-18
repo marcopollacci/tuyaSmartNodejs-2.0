@@ -6,15 +6,15 @@ export class QuerySingleDeviceDTO {
     @IsNotEmpty()
     @IsString()
     @ApiProperty()
-    id: number;
+    id: string;
 
     @IsNotEmpty()
     @IsString()
     @ApiProperty()
-    key: number;
+    key: string;
 
     @IsNotEmpty()
     @IsString()
     @ApiProperty()
-    use: number;
+    use: string;
 }
