@@ -81,7 +81,6 @@ export class TuyaService {
     objectSet: ISetData,
   ): Promise<void> {
     const device = this.generateConnectionTuya(queryParams.id, queryParams.key);
-    this.logger.log('objectSet', JSON.stringify(objectSet));
     device.on('data', (data: IDataTuya) => {
       if (typeof data !== 'undefined') {
         const cambio_stato = new Promise((resolve) => {

@@ -12,6 +12,5 @@ run ```npm run build```
 ## Usage
 go to ```/swagger/``` for documentation
 
-
 ## Pm2
 Use Pm2 with ecosystem.config.js file include in this project!

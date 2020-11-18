@@ -12,6 +12,7 @@ export interface IDataSet {
 }
 
 export interface ISetData {
-  multiple: boolean;
-  data: IDataSet;
+  multiple?: boolean;
+  data?: IDataSet;
+  set?: boolean;
 }

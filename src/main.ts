@@ -5,6 +5,7 @@ import {
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { VERSION_APPLICATION } from '../config/version';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -22,7 +23,7 @@ async function bootstrap() {
   const options = new DocumentBuilder()
     .setTitle('Tuya Call')
     .setDescription('TuyaCall API')
-    .setVersion('1.0')
+    .setVersion(VERSION_APPLICATION)
     .build();
 
   const document = SwaggerModule.createDocument(app, options);
