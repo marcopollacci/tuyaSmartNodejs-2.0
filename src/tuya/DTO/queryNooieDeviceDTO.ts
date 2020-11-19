@@ -7,7 +7,9 @@ export class QueryNooieDeviceDTO extends QuerySingleDeviceDTO {
   @IsNumberString({
     no_symbols: true, //evita caratteri che non siano numeri, compresi . e ,
   })
-  @ApiProperty()
+  @ApiProperty({
+    required: false,
+  })
   temperature: number;
 
   @IsOptional()
@@ -16,6 +18,7 @@ export class QueryNooieDeviceDTO extends QuerySingleDeviceDTO {
   })
   @ApiProperty({
     description: `Use 'colour' or 'white'`,
+    required: false,
   })
   mode: string;
 
@@ -26,12 +29,14 @@ export class QueryNooieDeviceDTO extends QuerySingleDeviceDTO {
   @ApiProperty({
     minimum: 1,
     maximum: 100,
+    required: false,
   })
   dimmer: number;
 
   @IsOptional()
   @ApiProperty({
     description: `Color in RGB, es: '255,255,0'`,
+    required: false,
   })
   @Matches(/(\d{1,3}),(\d{1,3}),(\d{1,3})/, {
     message: `Not Valid, es: 255,255,0`,
