@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 14
+  - 15
+before_install:
+  - npm i -g npm@latest
+install:
+  - npm
+script:
+  - npm run test
