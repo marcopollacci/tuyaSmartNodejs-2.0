@@ -374,14 +374,14 @@ export class ContactTuyaService {
         .then(() &#x3D;&gt; {
           // Connect to device
           device.connect().catch((reason) &#x3D;&gt; {
-            this.logger.error(reason);
+            this.logger.error(JSON.stringify(reason));
             if (oper.retry(reason)) {
               return;
             }
           });
         })
         .catch((reason) &#x3D;&gt; {
-          this.logger.error(reason);
+          this.logger.error(JSON.stringify(reason));
           if (oper.retry(reason)) {
             return;
           }
@@ -396,9 +396,9 @@ export class ContactTuyaService {
         this.logger.log(&#x27;Disconnected from device.&#x27;);
       });
 
-      device.on(&#x27;error&#x27;, (error) &#x3D;&gt; {
-        this.logger.error(error);
-        if (oper.retry(error)) {
+      device.on(&#x27;error&#x27;, (reason) &#x3D;&gt; {
+        this.logger.error(JSON.stringify(reason));
+        if (oper.retry(reason)) {
           return;
         }
       });

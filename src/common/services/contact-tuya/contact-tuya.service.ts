@@ -50,14 +50,14 @@ export class ContactTuyaService {
         .then(() => {
           // Connect to device
           device.connect().catch((reason) => {
-            this.logger.error(reason);
+            this.logger.error(JSON.stringify(reason));
             if (oper.retry(reason)) {
               return;
             }
           });
         })
         .catch((reason) => {
-          this.logger.error(reason);
+          this.logger.error(JSON.stringify(reason));
           if (oper.retry(reason)) {
             return;
           }
@@ -72,9 +72,9 @@ export class ContactTuyaService {
         this.logger.log('Disconnected from device.');
       });
 
-      device.on('error', (error) => {
-        this.logger.error(error);
-        if (oper.retry(error)) {
+      device.on('error', (reason) => {
+        this.logger.error(JSON.stringify(reason));
+        if (oper.retry(reason)) {
           return;
         }
       });
