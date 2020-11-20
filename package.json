@@ -19,7 +19,9 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "compodoc": "compodoc -p tsconfig.json -d ./docs",
+    "compodoc-serve": "compodoc -s tsconfig.json -d ./docs -r 8180"
   },
   "dependencies": {
     "@nestjs/common": "^7.5.1",
@@ -32,11 +34,12 @@
     "fastify-swagger": "^3.5.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "tuyapi": "github:codetheweb/tuyapi#43247e2f1e13a81869320c7bef5cf5e1436a3605",
     "rxjs": "^6.6.3",
-    "swagger-ui-express": "^4.1.4"
+    "swagger-ui-express": "^4.1.4",
+    "tuyapi": "github:codetheweb/tuyapi#43247e2f1e13a81869320c7bef5cf5e1436a3605"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.1.11",
     "@nestjs/cli": "^7.5.1",
     "@nestjs/schematics": "^7.1.3",
     "@nestjs/testing": "^7.5.1",
