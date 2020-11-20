@@ -34,7 +34,7 @@ http://127.0.0.1:8081/nooie?id=<id_device>&key=<key_device>&use=accendi
 
 For each call, there are many options (especially for nooie bulbs).
 The system exposes its api and all the options provided through the url ```http://127.0.0.1:8081/swagger``` which is available after the project has been started.
-
+You can find project documentation schema here: https://marcopollacci.github.io/tuyaSmartNodejs-2.0/
 
 ## Pm2
 Use Pm2 with ecosystem.config.js file include in this project!
