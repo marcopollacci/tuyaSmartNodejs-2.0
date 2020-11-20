@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { QueryNooieDeviceDTO } from '../../DTO/queryNooieDeviceDTO';
-import { ColorConversionService } from '../../services/color-conversion/color-conversion.service';
-import { TuyaService } from '../../services/tuya/tuya.service';
+import { ColorConversionService } from '../../../common/services/color-conversion/color-conversion.service';
+import { ContactTuyaService } from '../../../common/services/contact-tuya/contact-tuya.service';
+import { NooieService } from '../../services/nooie/nooie.service';
 import { NooieController } from './nooie.controller';
 
 describe('NooieController', () => {
@@ -10,7 +10,7 @@ describe('NooieController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [NooieController],
-      providers: [QueryNooieDeviceDTO, TuyaService, ColorConversionService],
+      providers: [NooieService, ColorConversionService, ContactTuyaService],
     }).compile();
 
     controller = module.get<NooieController>(NooieController);

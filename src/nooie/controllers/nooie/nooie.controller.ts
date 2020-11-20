@@ -1,16 +1,16 @@
 import { Controller, Get, Query } from '@nestjs/common';
-import { QueryNooieDeviceDTO } from '../../DTO/queryNooieDeviceDTO';
-import { TuyaService } from '../../services/tuya/tuya.service';
+import { QueryNooieDeviceDTO } from '../../../common/DTO/queryNooieDeviceDTO';
+import { NooieService } from '../../services/nooie/nooie.service';
 
 @Controller('nooie')
 export class NooieController {
-  constructor(private tuyaSrv: TuyaService) {}
+  constructor(private nooieSrv: NooieService) {}
 
   @Get()
   async singleDevice(
     @Query() query: QueryNooieDeviceDTO,
   ): Promise<QueryNooieDeviceDTO> {
-    this.tuyaSrv.triggerNooieDevice(query);
+    this.nooieSrv.triggerNooieDevice(query);
     return query;
   }
 }

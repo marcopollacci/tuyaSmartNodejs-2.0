@@ -1,20 +1,10 @@
 import { Module } from '@nestjs/common';
+import { ContactTuyaService } from '../common/services/contact-tuya/contact-tuya.service';
 import { TuyaController } from './controllers/tuya/tuya.controller';
 import { TuyaService } from './services/tuya/tuya.service';
-import { NooieController } from './controllers/nooie/nooie.controller';
-import { ColorConversionService } from './services/color-conversion/color-conversion.service';
-import { QueryMultipleDeviceDTO } from './DTO/queryMultipleDeviceDTO';
-import { QueryNooieDeviceDTO } from './DTO/queryNooieDeviceDTO';
-import { QuerySingleDeviceDTO } from './DTO/querySingleDeviceDTO';
 
 @Module({
-  controllers: [TuyaController, NooieController],
-  providers: [
-    TuyaService,
-    ColorConversionService,
-    QuerySingleDeviceDTO,
-    QueryMultipleDeviceDTO,
-    QueryNooieDeviceDTO,
-  ],
+  controllers: [TuyaController],
+  providers: [TuyaService, ContactTuyaService],
 })
 export class TuyaModule {}

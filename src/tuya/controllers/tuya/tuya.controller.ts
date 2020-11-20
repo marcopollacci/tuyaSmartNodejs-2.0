@@ -1,6 +1,6 @@
 import { Controller, Get, Query } from '@nestjs/common';
-import { QueryMultipleDeviceDTO } from '../../DTO/queryMultipleDeviceDTO';
-import { QuerySingleDeviceDTO } from '../../DTO/querySingleDeviceDTO';
+import { QueryMultipleDeviceDTO } from '../../../common/DTO/queryMultipleDeviceDTO';
+import { QuerySingleDeviceDTO } from '../../../common/DTO/querySingleDeviceDTO';
 import { TuyaService } from '../../services/tuya/tuya.service';
 
 @Controller('tuya')

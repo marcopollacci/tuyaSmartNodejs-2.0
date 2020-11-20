@@ -1,7 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { QueryMultipleDeviceDTO } from '../../DTO/queryMultipleDeviceDTO';
-import { QuerySingleDeviceDTO } from '../../DTO/querySingleDeviceDTO';
-import { ColorConversionService } from '../../services/color-conversion/color-conversion.service';
+import { ContactTuyaService } from '../../../common/services/contact-tuya/contact-tuya.service';
 import { TuyaService } from '../../services/tuya/tuya.service';
 import { TuyaController } from './tuya.controller';
 
@@ -11,12 +9,7 @@ describe('TuyaController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [TuyaController],
-      providers: [
-        QuerySingleDeviceDTO,
-        QueryMultipleDeviceDTO,
-        TuyaService,
-        ColorConversionService,
-      ],
+      providers: [ContactTuyaService, TuyaService],
     }).compile();
 
     controller = module.get<TuyaController>(TuyaController);
