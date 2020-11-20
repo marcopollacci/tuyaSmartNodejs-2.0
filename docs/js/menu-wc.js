@@ -77,6 +77,39 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                             </li>
                             <li class="link">
+                                <a href="modules/LifxModule.html" data-type="entity-link">LifxModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#controllers-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' : 'data-target="#xs-controllers-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' }>
+                                            <span class="icon ion-md-swap"></span>
+                                            <span>Controllers</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' :
+                                            'id="xs-controllers-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' }>
+                                            <li class="link">
+                                                <a href="controllers/LifxController.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">LifxController</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' : 'data-target="#xs-injectables-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' :
+                                        'id="xs-injectables-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' }>
+                                        <li class="link">
+                                            <a href="injectables/LifxService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>LifxService</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/NooieModule.html" data-type="entity-link">NooieModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -164,6 +197,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
+                            <li class="link">
+                                <a href="classes/QueryLifxDTO.html" data-type="entity-link">QueryLifxDTO</a>
+                            </li>
                             <li class="link">
                                 <a href="classes/QueryMultipleDeviceDTO.html" data-type="entity-link">QueryMultipleDeviceDTO</a>
                             </li>

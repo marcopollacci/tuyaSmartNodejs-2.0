@@ -37,7 +37,7 @@
 <p>Refactory of the tuyaSmartNodejs repository from express to nestjs for future implementations</p>
 <h2 id="information">Information</h2>
 <p>The project born to have an http server to remotely manage the home automation sockets compatible with the Tuya and Smart Life apps.
-Currently, single sockets and multiple sockets are managed and recently compatibility with Nooie bulbs has also been implemented.</p>
+Currently, single sockets and multiple sockets are managed and recently compatibility with Nooie bulbs and Lifx white bulb has also been implemented.</p>
 <h2 id="install">Install</h2>
 <p>Just clone repository, run <code>npm install</code></p>
 <h2 id="build">Build</h2>
@@ -51,6 +51,8 @@ Currently, single sockets and multiple sockets are managed and recently compatib
 <div><pre class="line-numbers"><code class="language-http">http://127.0.0.1:8081/tuya/single?id=&lt;id_device&gt;&amp;key=&lt;key_device&gt;&amp;use=accendi</code></pre></div></li>
 <li><p>Turn On nooie bulb</p>
 <div><pre class="line-numbers"><code class="language-http">http://127.0.0.1:8081/nooie?id=&lt;id_device&gt;&amp;key=&lt;key_device&gt;&amp;use=accendi</code></pre></div></li>
+<li><p>Turn On lifx bulb</p>
+<div><pre class="line-numbers"><code class="language-http">http://127.0.0.1:8081/lifx/bulb?light=&lt;id_light&gt;&amp;state=ON</code></pre></div></li>
 </ul>
 <p>For each call, there are many options (especially for nooie bulbs).
 The system exposes its api and all the options provided through the url <code>http://127.0.0.1:8081/swagger</code> which is available after the project has been started.

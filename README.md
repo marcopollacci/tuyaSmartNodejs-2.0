@@ -7,7 +7,7 @@ Refactory of the tuyaSmartNodejs repository from express to nestjs for future im
 
 ## Information
 The project born to have an http server to remotely manage the home automation sockets compatible with the Tuya and Smart Life apps.
-Currently, single sockets and multiple sockets are managed and recently compatibility with Nooie bulbs has also been implemented.
+Currently, single sockets and multiple sockets are managed and recently compatibility with Nooie bulbs and Lifx white bulb has also been implemented.
 
 ## Install
 Just clone repository, run ```npm install```
@@ -30,6 +30,11 @@ http://127.0.0.1:8081/tuya/single?id=<id_device>&key=<key_device>&use=accendi
 - Turn On nooie bulb
 ```http
 http://127.0.0.1:8081/nooie?id=<id_device>&key=<key_device>&use=accendi
+```
+
+- Turn On lifx bulb
+```http
+http://127.0.0.1:8081/lifx/bulb?light=<id_light>&state=ON
 ```
 
 For each call, there are many options (especially for nooie bulbs).

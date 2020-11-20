@@ -22,53 +22,65 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="sans-serif" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_AppModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="67,-70 67,-195 429,-195 429,-70 67,-70"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="16,-70 16,-195 480,-195 480,-70 16,-70"/>
 </g>
 <g id="clust3" class="cluster">
 <title>cluster_AppModule_imports</title>
-<polygon fill="none" stroke="black" points="75,-78 75,-130 421,-130 421,-78 75,-78"/>
+<polygon fill="none" stroke="black" points="24,-78 24,-130 472,-130 472,-78 24,-78"/>
 </g>
 <!-- CommonModule -->
 <g id="node1" class="node">
 <title>CommonModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="412.67,-122 409.67,-126 388.67,-126 385.67,-122 301.33,-122 301.33,-86 412.67,-86 412.67,-122"/>
-<text text-anchor="middle" x="357" y="-99.8" font-family="Times,serif" font-size="14.00">CommonModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="463.67,-122 460.67,-126 439.67,-126 436.67,-122 352.33,-122 352.33,-86 463.67,-86 463.67,-122"/>
+<text text-anchor="middle" x="408" y="-99.8" font-family="Times,serif" font-size="14.00">CommonModule</text>
 </g>
 <!-- AppModule -->
-<g id="node4" class="node">
+<g id="node5" class="node">
 <title>AppModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="277.66,-187 274.66,-191 253.66,-191 250.66,-187 194.34,-187 194.34,-151 277.66,-151 277.66,-187"/>
-<text text-anchor="middle" x="236" y="-164.8" font-family="Times,serif" font-size="14.00">AppModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="279.66,-187 276.66,-191 255.66,-191 252.66,-187 196.34,-187 196.34,-151 279.66,-151 279.66,-187"/>
+<text text-anchor="middle" x="238" y="-164.8" font-family="Times,serif" font-size="14.00">AppModule</text>
 </g>
 <!-- CommonModule&#45;&gt;AppModule -->
 <g id="edge1" class="edge">
 <title>CommonModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M357,-122.11C357,-141.34 357,-169 357,-169 357,-169 287.98,-169 287.98,-169"/>
-<polygon fill="black" stroke="black" points="287.98,-165.5 277.98,-169 287.98,-172.5 287.98,-165.5"/>
+<path fill="none" stroke="black" d="M408,-122.11C408,-141.34 408,-169 408,-169 408,-169 290.02,-169 290.02,-169"/>
+<polygon fill="black" stroke="black" points="290.02,-165.5 280.02,-169 290.02,-172.5 290.02,-165.5"/>
+</g>
+<!-- LifxModule -->
+<g id="node2" class="node">
+<title>LifxModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="333.65,-122 330.65,-126 309.65,-126 306.65,-122 250.35,-122 250.35,-86 333.65,-86 333.65,-122"/>
+<text text-anchor="middle" x="292" y="-99.8" font-family="Times,serif" font-size="14.00">LifxModule</text>
+</g>
+<!-- LifxModule&#45;&gt;AppModule -->
+<g id="edge2" class="edge">
+<title>LifxModule&#45;&gt;AppModule</title>
+<path fill="none" stroke="black" d="M265,-122.11C265,-122.11 265,-140.99 265,-140.99"/>
+<polygon fill="black" stroke="black" points="261.5,-140.99 265,-150.99 268.5,-140.99 261.5,-140.99"/>
 </g>
 <!-- NooieModule -->
-<g id="node2" class="node">
+<g id="node3" class="node">
 <title>NooieModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="282.76,-122 279.76,-126 258.76,-126 255.76,-122 189.24,-122 189.24,-86 282.76,-86 282.76,-122"/>
-<text text-anchor="middle" x="236" y="-99.8" font-family="Times,serif" font-size="14.00">NooieModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="231.76,-122 228.76,-126 207.76,-126 204.76,-122 138.24,-122 138.24,-86 231.76,-86 231.76,-122"/>
+<text text-anchor="middle" x="185" y="-99.8" font-family="Times,serif" font-size="14.00">NooieModule</text>
 </g>
 <!-- NooieModule&#45;&gt;AppModule -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>NooieModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M236,-122.11C236,-122.11 236,-140.99 236,-140.99"/>
-<polygon fill="black" stroke="black" points="232.5,-140.99 236,-150.99 239.5,-140.99 232.5,-140.99"/>
+<path fill="none" stroke="black" d="M214.03,-122.11C214.03,-122.11 214.03,-140.99 214.03,-140.99"/>
+<polygon fill="black" stroke="black" points="210.53,-140.99 214.03,-150.99 217.53,-140.99 210.53,-140.99"/>
 </g>
 <!-- TuyaModule -->
-<g id="node3" class="node">
+<g id="node4" class="node">
 <title>TuyaModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="171.32,-122 168.32,-126 147.32,-126 144.32,-122 82.68,-122 82.68,-86 171.32,-86 171.32,-122"/>
-<text text-anchor="middle" x="127" y="-99.8" font-family="Times,serif" font-size="14.00">TuyaModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="120.32,-122 117.32,-126 96.32,-126 93.32,-122 31.68,-122 31.68,-86 120.32,-86 120.32,-122"/>
+<text text-anchor="middle" x="76" y="-99.8" font-family="Times,serif" font-size="14.00">TuyaModule</text>
 </g>
 <!-- TuyaModule&#45;&gt;AppModule -->
-<g id="edge3" class="edge">
+<g id="edge4" class="edge">
 <title>TuyaModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M127,-122.11C127,-141.34 127,-169 127,-169 127,-169 184.17,-169 184.17,-169"/>
-<polygon fill="black" stroke="black" points="184.17,-172.5 194.17,-169 184.17,-165.5 184.17,-172.5"/>
+<path fill="none" stroke="black" d="M76,-122.11C76,-141.34 76,-169 76,-169 76,-169 186.28,-169 186.28,-169"/>
+<polygon fill="black" stroke="black" points="186.28,-172.5 196.28,-169 186.28,-165.5 186.28,-172.5"/>
 </g>
 </g>
 </svg>
