@@ -15,6 +15,11 @@ Just clone repository, run ```npm install```
 ## Build
 run ```npm run build```
 
+## Supported Device
+- Bulb and Socker compatible with Tuya and SmartLife app
+- Nooie Bulb
+- Lifx Bulb (no color version)
+
 ## Call Example
 In order to work, you need both the id and the key of the device.
 
