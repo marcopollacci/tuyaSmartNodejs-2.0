@@ -222,8 +222,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/common/services/contact-tuya/contact-tuya.service.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/common/services/contact-tuya/contact-tuya.service.ts:34</a></div>
                 </td>
             </tr>
 
@@ -345,8 +345,7 @@ export class ContactTuyaService {
     device.on(&#x27;data&#x27;, (data: IDataTuya) &#x3D;&gt; {
       if (typeof data !&#x3D;&#x3D; &#x27;undefined&#x27;) {
         const cambio_stato &#x3D; new Promise((resolve) &#x3D;&gt; {
-          device.set(objectSet);
-          resolve(&#x27;ok!&#x27;);
+          device.set(objectSet).then(() &#x3D;&gt; resolve(&#x27;ok!&#x27;));
         });
 
         cambio_stato.then(() &#x3D;&gt; {

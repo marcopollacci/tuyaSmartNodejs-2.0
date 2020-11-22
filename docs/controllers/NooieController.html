@@ -127,7 +127,7 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get()<br /></code>
+                    <code>@Get(&#x27;bulb&#x27;)<br /></code>
                 </td>
             </tr>
 
@@ -193,7 +193,7 @@ import { NooieService } from &#x27;../../services/nooie/nooie.service&#x27;;
 export class NooieController {
   constructor(private nooieSrv: NooieService) {}
 
-  @Get()
+  @Get(&#x27;bulb&#x27;)
   async singleDevice(
     @Query() query: QueryNooieDeviceDTO,
   ): Promise&lt;QueryNooieDeviceDTO&gt; {

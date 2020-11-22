@@ -21,8 +21,7 @@ export class ContactTuyaService {
     device.on('data', (data: IDataTuya) => {
       if (typeof data !== 'undefined') {
         const cambio_stato = new Promise((resolve) => {
-          device.set(objectSet);
-          resolve('ok!');
+          device.set(objectSet).then(() => resolve('ok!'));
         });
 
         cambio_stato.then(() => {
