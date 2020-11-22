@@ -6,7 +6,7 @@ import { NooieService } from '../../services/nooie/nooie.service';
 export class NooieController {
   constructor(private nooieSrv: NooieService) {}
 
-  @Get()
+  @Get('bulb')
   async singleDevice(
     @Query() query: QueryNooieDeviceDTO,
   ): Promise<QueryNooieDeviceDTO> {

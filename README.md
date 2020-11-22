@@ -34,7 +34,7 @@ http://127.0.0.1:8081/tuya/single?id=<id_device>&key=<key_device>&use=accendi
 
 - Turn On nooie bulb
 ```http
-http://127.0.0.1:8081/nooie?id=<id_device>&key=<key_device>&use=accendi
+http://127.0.0.1:8081/nooie/bulb?id=<id_device>&key=<key_device>&use=accendi
 ```
 
 - Turn On lifx bulb
