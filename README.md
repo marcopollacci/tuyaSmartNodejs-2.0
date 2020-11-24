@@ -48,3 +48,6 @@ You can find project documentation schema here: https://marcopollacci.github.io/
 
 ## Pm2
 Use Pm2 with ecosystem.config.js file include in this project!
+
+## Docker Package
+You can find Docker package here in github https://github.com/marcopollacci/tuyaSmartNodejs-2.0/packages/
