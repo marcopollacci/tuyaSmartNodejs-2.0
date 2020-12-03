@@ -24,7 +24,7 @@ export class LifxController {
         HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
-    this.lifxSrv.triggerLifxDevice(query);
+    await this.lifxSrv.triggerLifxDevice(query);
     return query;
   }
 }

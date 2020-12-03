@@ -10,6 +10,7 @@ describe('LifxController', () => {
   let srv: LifxService;
 
   beforeEach(async () => {
+    MODULE_ENABLE.lifx = false; // avoid instance of UDP Lifx Server (maybe can improve service)
     const module: TestingModule = await Test.createTestingModule({
       controllers: [LifxController],
       providers: [LifxService],
@@ -17,6 +18,7 @@ describe('LifxController', () => {
 
     controller = module.get<LifxController>(LifxController);
     srv = module.get<LifxService>(LifxService);
+
   });
 
   it('should be defined', () => {
@@ -24,7 +26,6 @@ describe('LifxController', () => {
   });
 
   it('SingleDevice: Error if not enable', async () => {
-    MODULE_ENABLE.lifx = false;
     const queryParam = new QueryLifxDTO();
     jest.spyOn(srv, 'triggerLifxDevice').mockResolvedValue(null);
     try {
@@ -36,8 +37,8 @@ describe('LifxController', () => {
 
   it('SingleDevice: should pass correct query params', async () => {
     MODULE_ENABLE.lifx = true;
-    const queryParam = new QueryLifxDTO();
     jest.spyOn(srv, 'triggerLifxDevice').mockResolvedValue(null);
+    const queryParam = new QueryLifxDTO();
     expect(await controller.singleDevice(queryParam)).toBeInstanceOf(
       QueryLifxDTO,
     );
