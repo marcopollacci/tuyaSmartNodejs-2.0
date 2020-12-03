@@ -6,26 +6,26 @@ import { QuerySingleDeviceDTO } from '../../../common/DTO/querySingleDeviceDTO';
 export class TuyaService {
   constructor(private ContactTuyaSrv: ContactTuyaService) {}
 
-  triggerSingleDevice(queryParams: QuerySingleDeviceDTO) {
+  async triggerSingleDevice(queryParams: QuerySingleDeviceDTO) {
     let checkuse = false;
 
     if (queryParams.use === 'accendi') {
       checkuse = true;
     }
 
-    this.ContactTuyaSrv.doTrigger(queryParams, {
+    await this.ContactTuyaSrv.doTrigger(queryParams, {
       set: checkuse,
     });
   }
 
-  triggerMultipleDevice(queryParams: QueryMultipleDeviceDTO) {
+  async triggerMultipleDevice(queryParams: QueryMultipleDeviceDTO) {
     let checkuse = false;
 
     if (queryParams.use === 'accendi') {
       checkuse = true;
     }
 
-    this.ContactTuyaSrv.doTrigger(queryParams, {
+    await this.ContactTuyaSrv.doTrigger(queryParams, {
       multiple: true,
       data: {
         [queryParams.subdevice]: checkuse,

@@ -4,6 +4,6 @@ import { LifxService } from './services/lifx/lifx.service';
 
 @Module({
   controllers: [LifxController],
-  providers: [LifxService]
+  providers: [LifxService],
 })
 export class LifxModule {}
