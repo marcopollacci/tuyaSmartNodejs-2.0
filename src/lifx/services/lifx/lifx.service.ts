@@ -15,7 +15,7 @@ export class LifxService {
     }
   }
 
-  triggerLifxDevice(query: QueryLifxDTO): void {
+  async triggerLifxDevice(query: QueryLifxDTO): Promise<void> {
     const light = this.client.light(query.light);
     const percentuale = 'percentual' in query ? query.percentual : 0;
     switch (query.state) {

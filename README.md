@@ -3,10 +3,10 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/marcopollacci/tuyaSmartNodejs-2.0.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/marcopollacci/tuyaSmartNodejs-2.0/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/marcopollacci/tuyaSmartNodejs-2.0.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/marcopollacci/tuyaSmartNodejs-2.0/context:javascript)
 
-Refactory of the tuyaSmartNodejs repository from express to nestjs for future implementations
+Refactor of the tuyaSmartNodejs repository from express to nestjs for future implementations
 
 ## Information
-The project born to have an http server to remotely manage the home automation sockets compatible with the Tuya and Smart Life apps.
+The project born to create a http server for manage the home automation sockets compatible with the Tuya and Smart Life apps.
 Currently, single sockets and multiple sockets are managed and recently compatibility with Nooie bulbs and Lifx white bulb has also been implemented.
 
 ## Install
@@ -48,3 +48,9 @@ You can find project documentation schema here: https://marcopollacci.github.io/
 
 ## Pm2
 Use Pm2 with ecosystem.config.js file include in this project!
+
+## Docker Package
+You can find Docker package here in github https://github.com/marcopollacci/tuyaSmartNodejs-2.0/packages/
+
+## RoadMap
+- Implement service to control and learn with BroadlinkIR
