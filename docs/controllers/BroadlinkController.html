@@ -36,7 +36,7 @@
 
 <ol class="breadcrumb">
   <li>Controllers</li>
-  <li>TuyaController</li>
+  <li>BroadlinkController</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -54,14 +54,14 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/tuya/controllers/tuya/tuya.controller.ts</code>
+            <code>src/broadlink/controllers/broadlink/broadlink.controller.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Prefix</h3>
             </p>
             <p class="comment">
-                <code>tuya</code>
+                <code>broadlink</code>
             </p>
 
 
@@ -83,11 +83,11 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#multipleDevice">multipleDevice</a>
+                                <a href="#executeCommand">executeCommand</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#singleDevice">singleDevice</a>
+                                <a href="#learningCommand">learningCommand</a>
                             </li>
                         </ul>
                     </td>
@@ -110,20 +110,20 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="multipleDevice"></a>
+                    <a name="executeCommand"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            multipleDevice
+                            executeCommand
                         </b>
-                        <a href="#multipleDevice"><span class="icon ion-ios-link"></span></a>
+                        <a href="#executeCommand"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>multipleDevice(query: <a href="../classes/QueryMultipleDeviceDTO.html">QueryMultipleDeviceDTO</a>)</code>
+                    <code>executeCommand()</code>
                 </td>
             </tr>
 
@@ -131,14 +131,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;multiple&#x27;)<br /></code>
+                    <code>@Get(&#x27;execute&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/tuya/controllers/tuya/tuya.controller.ts:19</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/broadlink/controllers/broadlink/broadlink.controller.ts:11</a></div>
                 </td>
             </tr>
 
@@ -147,39 +147,8 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>query</td>
-                                    <td>
-                                                <code><a href="../classes/QueryMultipleDeviceDTO.html" target="_self" >QueryMultipleDeviceDTO</a></code>
-                                    </td>
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
 
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/QueryMultipleDeviceDTO.html" target="_self" >Promise&lt;QueryMultipleDeviceDTO&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -189,20 +158,20 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="singleDevice"></a>
+                    <a name="learningCommand"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            singleDevice
+                            learningCommand
                         </b>
-                        <a href="#singleDevice"><span class="icon ion-ios-link"></span></a>
+                        <a href="#learningCommand"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>singleDevice(query: <a href="../classes/QuerySingleDeviceDTO.html">QuerySingleDeviceDTO</a>)</code>
+                    <code>learningCommand()</code>
                 </td>
             </tr>
 
@@ -210,14 +179,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;single&#x27;)<br /></code>
+                    <code>@Get(&#x27;learning&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/tuya/controllers/tuya/tuya.controller.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/broadlink/controllers/broadlink/broadlink.controller.ts:16</a></div>
                 </td>
             </tr>
 
@@ -226,39 +195,8 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>query</td>
-                                    <td>
-                                                <code><a href="../classes/QuerySingleDeviceDTO.html" target="_self" >QuerySingleDeviceDTO</a></code>
-                                    </td>
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
 
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/QuerySingleDeviceDTO.html" target="_self" >Promise&lt;QuerySingleDeviceDTO&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -268,30 +206,25 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Query } from &#x27;@nestjs/common&#x27;;
-import { QueryMultipleDeviceDTO } from &#x27;../../../common/DTO/queryMultipleDeviceDTO&#x27;;
-import { QuerySingleDeviceDTO } from &#x27;../../../common/DTO/querySingleDeviceDTO&#x27;;
-import { TuyaService } from &#x27;../../services/tuya/tuya.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get } from &#x27;@nestjs/common&#x27;;
+import { ExecuteService } from &#x27;../../services/execute/execute.service&#x27;;
 
-@Controller(&#x27;tuya&#x27;)
-export class TuyaController {
-  constructor(private tuyaSrv: TuyaService) {}
+@Controller(&#x27;broadlink&#x27;)
+export class BroadlinkController {
 
-  @Get(&#x27;single&#x27;)
-  async singleDevice(
-    @Query() query: QuerySingleDeviceDTO,
-  ): Promise&lt;QuerySingleDeviceDTO&gt; {
-    await this.tuyaSrv.triggerSingleDevice(query);
-    return query;
+  constructor(private excuteSrv: ExecuteService) {
   }
 
-  @Get(&#x27;multiple&#x27;)
-  async multipleDevice(
-    @Query() query: QueryMultipleDeviceDTO,
-  ): Promise&lt;QueryMultipleDeviceDTO&gt; {
-    await this.tuyaSrv.triggerMultipleDevice(query);
-    return query;
+  @Get(&#x27;execute&#x27;)
+  async executeCommand(): Promise&lt;string&gt;  {
+    return this.excuteSrv.doCommand();
   }
+
+  @Get(&#x27;learning&#x27;)
+  async learningCommand(): Promise&lt;string&gt;  {
+    return &#x27;to be implement...&#x27;;
+  }
+
 }
 </code></pre>
     </div>
@@ -327,7 +260,7 @@ export class TuyaController {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
-            var COMPODOC_CURRENT_PAGE_URL = 'TuyaController.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'BroadlinkController.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

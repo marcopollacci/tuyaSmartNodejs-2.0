@@ -27,16 +27,18 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content controller">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
 
+
+
 <ol class="breadcrumb">
-  <li>Controllers</li>
-  <li>LifxController</li>
+  <li>Injectables</li>
+  <li>ExecuteService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -54,16 +56,8 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/lifx/controllers/lifx/lifx.controller.ts</code>
+            <code>src/broadlink/services/execute/execute.service.ts</code>
         </p>
-
-            <p class="comment">
-                <h3>Prefix</h3>
-            </p>
-            <p class="comment">
-                <code>lifx</code>
-            </p>
-
 
 
 
@@ -83,7 +77,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#singleDevice">singleDevice</a>
+                                <a href="#doCommand">doCommand</a>
                             </li>
                         </ul>
                     </td>
@@ -97,6 +91,7 @@
     </table>
 </section>
 
+
             <section>
     
     <h3 id="methods">
@@ -106,35 +101,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="singleDevice"></a>
+                    <a name="doCommand"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            singleDevice
+                            doCommand
                         </b>
-                        <a href="#singleDevice"><span class="icon ion-ios-link"></span></a>
+                        <a href="#doCommand"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>singleDevice(query: <a href="../classes/QueryLifxDTO.html">QueryLifxDTO</a>)</code>
+                    <code>doCommand()</code>
                 </td>
             </tr>
 
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Get(&#x27;bulb&#x27;)<br /></code>
-                </td>
-            </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">src/lifx/controllers/lifx/lifx.controller.ts:17</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="6"
+                            class="link-to-prism">src/broadlink/services/execute/execute.service.ts:6</a></div>
                 </td>
             </tr>
 
@@ -143,83 +131,33 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>query</td>
-                                    <td>
-                                                <code><a href="../classes/QueryLifxDTO.html" target="_self" >QueryLifxDTO</a></code>
-                                    </td>
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
 
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/QueryLifxDTO.html" target="_self" >Promise&lt;QueryLifxDTO&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
-</section>    </div>
+</section>
+
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  HttpException,
-  HttpStatus,
-  Controller,
-  Get,
-  Query,
-} from &#x27;@nestjs/common&#x27;;
-import * as service from &#x27;../../../../config/service&#x27;;
-import { QueryLifxDTO } from &#x27;../../../common/DTO/queryLifxDTO&#x27;;
-import { LifxService } from &#x27;../../services/lifx/lifx.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
 
-@Controller(&#x27;lifx&#x27;)
-export class LifxController {
-  constructor(private lifxSrv: LifxService) {}
+@Injectable()
+export class ExecuteService {
 
-  @Get(&#x27;bulb&#x27;)
-  async singleDevice(@Query() query: QueryLifxDTO): Promise&lt;QueryLifxDTO&gt; {
-    if (!service.MODULE_ENABLE.lifx) {
-      throw new HttpException(
-        {
-          status: HttpStatus.INTERNAL_SERVER_ERROR,
-          error: &#x27;MODULE LIFX NOT ACTIVE&#x27;,
-        },
-        HttpStatus.INTERNAL_SERVER_ERROR,
-      );
-    }
-    await this.lifxSrv.triggerLifxDevice(query);
-    return query;
+  async doCommand(): Promise&lt;string&gt; {
+    return &#x27;to be implemented...&#x27;;
   }
+
 }
 </code></pre>
     </div>
+
 </div>
-
-
 
 
 
@@ -248,8 +186,8 @@ export class LifxController {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
-            var COMPODOC_CURRENT_PAGE_URL = 'LifxController.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ExecuteService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
