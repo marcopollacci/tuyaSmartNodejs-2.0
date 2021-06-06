@@ -50,7 +50,7 @@ You can find project documentation schema here: https://marcopollacci.github.io/
 Use Pm2 with ecosystem.config.js file include in this project!
 
 ## Docker Package
-You can find Docker package here in github https://github.com/marcopollacci/tuyaSmartNodejs-2.0/packages/
+You can find Docker package here https://hub.docker.com/repository/docker/marcopollacci/tuya-smart-modejs-2.0
 
 ## RoadMap
 - Implement service to control and learn with BroadlinkIR
