@@ -99,6 +99,7 @@
                                 <a href="#startUpLifx">startUpLifx</a>
                             </li>
                             <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#triggerLifxDevice">triggerLifxDevice</a>
                             </li>
                         </ul>
@@ -185,6 +186,7 @@
                     <a name="triggerLifxDevice"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Async</span>
                             triggerLifxDevice
                         </b>
                         <a href="#triggerLifxDevice"><span class="icon ion-ios-link"></span></a>
@@ -193,7 +195,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>triggerLifxDevice(query: <a href="../classes/QueryLifxDTO.html">QueryLifxDTO</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>triggerLifxDevice(query: <a href="../classes/QueryLifxDTO.html">QueryLifxDTO</a>)</code>
                 </td>
             </tr>
 
@@ -238,7 +241,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -332,7 +335,7 @@ export class LifxService {
     }
   }
 
-  triggerLifxDevice(query: QueryLifxDTO): void {
+  async triggerLifxDevice(query: QueryLifxDTO): Promise&lt;void&gt; {
     const light &#x3D; this.client.light(query.light);
     const percentuale &#x3D; &#x27;percentual&#x27; in query ? query.percentual : 0;
     switch (query.state) {

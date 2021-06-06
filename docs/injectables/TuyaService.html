@@ -76,9 +76,11 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#triggerMultipleDevice">triggerMultipleDevice</a>
                             </li>
                             <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#triggerSingleDevice">triggerSingleDevice</a>
                             </li>
                         </ul>
@@ -154,6 +156,7 @@
                     <a name="triggerMultipleDevice"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Async</span>
                             triggerMultipleDevice
                         </b>
                         <a href="#triggerMultipleDevice"><span class="icon ion-ios-link"></span></a>
@@ -162,7 +165,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>triggerMultipleDevice(queryParams: <a href="../classes/QueryMultipleDeviceDTO.html">QueryMultipleDeviceDTO</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>triggerMultipleDevice(queryParams: <a href="../classes/QueryMultipleDeviceDTO.html">QueryMultipleDeviceDTO</a>)</code>
                 </td>
             </tr>
 
@@ -207,7 +211,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -224,6 +228,7 @@
                     <a name="triggerSingleDevice"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Async</span>
                             triggerSingleDevice
                         </b>
                         <a href="#triggerSingleDevice"><span class="icon ion-ios-link"></span></a>
@@ -232,7 +237,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>triggerSingleDevice(queryParams: <a href="../classes/QuerySingleDeviceDTO.html">QuerySingleDeviceDTO</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>triggerSingleDevice(queryParams: <a href="../classes/QuerySingleDeviceDTO.html">QuerySingleDeviceDTO</a>)</code>
                 </td>
             </tr>
 
@@ -277,7 +283,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -301,26 +307,26 @@ import { QuerySingleDeviceDTO } from &#x27;../../../common/DTO/querySingleDevice
 export class TuyaService {
   constructor(private ContactTuyaSrv: ContactTuyaService) {}
 
-  triggerSingleDevice(queryParams: QuerySingleDeviceDTO) {
+  async triggerSingleDevice(queryParams: QuerySingleDeviceDTO) {
     let checkuse &#x3D; false;
 
     if (queryParams.use &#x3D;&#x3D;&#x3D; &#x27;accendi&#x27;) {
       checkuse &#x3D; true;
     }
 
-    this.ContactTuyaSrv.doTrigger(queryParams, {
+    await this.ContactTuyaSrv.doTrigger(queryParams, {
       set: checkuse,
     });
   }
 
-  triggerMultipleDevice(queryParams: QueryMultipleDeviceDTO) {
+  async triggerMultipleDevice(queryParams: QueryMultipleDeviceDTO) {
     let checkuse &#x3D; false;
 
     if (queryParams.use &#x3D;&#x3D;&#x3D; &#x27;accendi&#x27;) {
       checkuse &#x3D; true;
     }
 
-    this.ContactTuyaSrv.doTrigger(queryParams, {
+    await this.ContactTuyaSrv.doTrigger(queryParams, {
       multiple: true,
       data: {
         [queryParams.subdevice]: checkuse,

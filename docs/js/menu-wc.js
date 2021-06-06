@@ -34,6 +34,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <span class="icon ion-ios-paper"></span>README
                             </a>
                         </li>
+                        <li class="link">
+                            <a href="license.html"  data-type="chapter-link">
+                                <span class="icon ion-ios-paper"></span>LICENSE
+                            </a>
+                        </li>
                                 <li class="link">
                                     <a href="dependencies.html" data-type="chapter-link">
                                         <span class="icon ion-ios-list"></span>Dependencies
@@ -80,13 +85,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/LifxModule.html" data-type="entity-link">LifxModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#controllers-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' : 'data-target="#xs-controllers-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' }>
+                                            'data-target="#controllers-links-module-LifxModule-36e88733586f1a50c2775ce69b1ecfed"' : 'data-target="#xs-controllers-links-module-LifxModule-36e88733586f1a50c2775ce69b1ecfed"' }>
                                             <span class="icon ion-md-swap"></span>
                                             <span>Controllers</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' :
-                                            'id="xs-controllers-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-LifxModule-36e88733586f1a50c2775ce69b1ecfed"' :
+                                            'id="xs-controllers-links-module-LifxModule-36e88733586f1a50c2775ce69b1ecfed"' }>
                                             <li class="link">
                                                 <a href="controllers/LifxController.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">LifxController</a>
@@ -95,13 +100,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' : 'data-target="#xs-injectables-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' }>
+                                        'data-target="#injectables-links-module-LifxModule-36e88733586f1a50c2775ce69b1ecfed"' : 'data-target="#xs-injectables-links-module-LifxModule-36e88733586f1a50c2775ce69b1ecfed"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' :
-                                        'id="xs-injectables-links-module-LifxModule-0594d201f678aaf4f0499210603e599e"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-LifxModule-36e88733586f1a50c2775ce69b1ecfed"' :
+                                        'id="xs-injectables-links-module-LifxModule-36e88733586f1a50c2775ce69b1ecfed"' }>
                                         <li class="link">
                                             <a href="injectables/LifxService.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>LifxService</a>

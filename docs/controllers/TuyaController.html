@@ -281,7 +281,7 @@ export class TuyaController {
   async singleDevice(
     @Query() query: QuerySingleDeviceDTO,
   ): Promise&lt;QuerySingleDeviceDTO&gt; {
-    this.tuyaSrv.triggerSingleDevice(query);
+    await this.tuyaSrv.triggerSingleDevice(query);
     return query;
   }
 
@@ -289,7 +289,7 @@ export class TuyaController {
   async multipleDevice(
     @Query() query: QueryMultipleDeviceDTO,
   ): Promise&lt;QueryMultipleDeviceDTO&gt; {
-    this.tuyaSrv.triggerMultipleDevice(query);
+    await this.tuyaSrv.triggerMultipleDevice(query);
     return query;
   }
 }
