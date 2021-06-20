@@ -1,5 +1,5 @@
 # TuyaSmartNodejs 2.0 based on Tuyapi ( https://codetheweb.github.io/tuyapi/index.html )
-[![Build Status](https://travis-ci.org/marcopollacci/tuyaSmartNodejs-2.0.svg?branch=master)](https://travis-ci.org/marcopollacci/tuyaSmartNodejs-2.0)
+[![Build Status](https://www.travis-ci.com/marcopollacci/tuyaSmartNodejs-2.0.svg?branch=master)](https://www.travis-ci.com/marcopollacci/tuyaSmartNodejs-2.0)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/marcopollacci/tuyaSmartNodejs-2.0.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/marcopollacci/tuyaSmartNodejs-2.0/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/marcopollacci/tuyaSmartNodejs-2.0.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/marcopollacci/tuyaSmartNodejs-2.0/context:javascript)
 
